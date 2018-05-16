@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HZPageView" customModule="ConsoleGameHelper" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="3wL-2u-bEh" id="aeY-2I-iTu"/>
+                <outlet property="mainImageView" destination="G2h-tc-rYK" id="vEc-zD-sAQ"/>
+                <outlet property="touchButton" destination="Hfk-hk-Pu8" id="tz8-dR-saW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="262"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G2h-tc-rYK">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="197.5"/>
+                    <gestureRecognizers/>
+                </imageView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="3wL-2u-bEh">
+                    <rect key="frame" x="0.0" y="197.5" width="375" height="65"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="cWu-6U-Iy9"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="aPs-97-DSt">
+                        <size key="itemSize" width="140" height="65"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Gdf-7T-hB0"/>
+                        <outlet property="delegate" destination="-1" id="XUy-zh-Hrs"/>
+                    </connections>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfk-hk-Pu8">
+                    <rect key="frame" x="-0.5" y="-1" width="375" height="198"/>
+                    <connections>
+                        <action selector="mainPicAction:" destination="-1" eventType="touchUpInside" id="upH-88-Vdy"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="G2h-tc-rYK" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="7zY-1P-ece"/>
+                <constraint firstItem="Hfk-hk-Pu8" firstAttribute="height" secondItem="G2h-tc-rYK" secondAttribute="height" id="9L6-6Q-9bp"/>
+                <constraint firstItem="Hfk-hk-Pu8" firstAttribute="centerX" secondItem="G2h-tc-rYK" secondAttribute="centerX" id="GfA-Of-dkx"/>
+                <constraint firstItem="3wL-2u-bEh" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="NNs-VB-PdO"/>
+                <constraint firstItem="G2h-tc-rYK" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Tjk-6N-AZs"/>
+                <constraint firstItem="3wL-2u-bEh" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Y7S-Au-ryp"/>
+                <constraint firstItem="G2h-tc-rYK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="buV-kx-VRZ"/>
+                <constraint firstItem="Hfk-hk-Pu8" firstAttribute="width" secondItem="G2h-tc-rYK" secondAttribute="width" id="stS-zG-XlC"/>
+                <constraint firstItem="Hfk-hk-Pu8" firstAttribute="centerY" secondItem="G2h-tc-rYK" secondAttribute="centerY" id="tkG-XJ-MWA"/>
+                <constraint firstItem="3wL-2u-bEh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="x3F-or-ZnV"/>
+                <constraint firstItem="3wL-2u-bEh" firstAttribute="top" secondItem="G2h-tc-rYK" secondAttribute="bottom" id="yRU-bq-pua"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="25.5" y="51.5"/>
+        </view>
+    </objects>
+</document>
